@@ -1,100 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: gray;
-    color: silver
+    font-family: 'Lato','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* background-color: gray;
+    color: silver */
 }
 
-#box1 {
-    display: grid;
-    grid-template-columns: 48% 4% 48%;
-    border: 1px solid black;
-    padding: 50px;
-    margin: 100px 20%;
-    height: 300px;
-    background-color: black;
+a{
+    text-decoration: none;
 }
 
-form > div {
+header{
+    height: 60px;
     display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom:1px solid grey ;
 }
 
-input {
-    width: 200px;
-    height: 25px;
-    margin-top: 10px;
-    font-size: 18px;
-    border-radius: 20px;
-    color: rgb(122, 7, 7);
-    height: 30px;
+header > ul{
+    display: flex;
+    width: 240px;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 30px;
+    list-style: none;
 }
 
-label {
-    font-size: 18px;
+header > ul > li{
+    background-color: rgb(122, 7, 7);
+    padding: 0 15px;
+    height: 40px;
+    border-radius:20px ;
+    display: flex;
+    align-items: center;
 }
 
-#submit {
-    color: rgb(5, 5, 5);
-    font-weight: bold;
-    margin-top: 10px;
+header > ul > li > a{
+    color: white;
 }
 
-#id3 {
-    width: 20%;
-    background-color: white;
+.container{
+    max-width: 1000px;
+    margin: 40px auto;
+    height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.container > div{
+    flex: 1;
     height: 100%;
 }
 
-#id2 {
-    font-size: 25px;
-    margin-left: 30px;
+.container > div:first-child {
+    padding-left: 60px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    border-radius: 10px;
 }
 
+.form-container > .form-info > h2{
+    margin-bottom: 10px;
+}
+
+.form-container > .form-info{
+    margin-bottom: 20px;
+}
+
+label{
+    margin-bottom: 12px;
+    display: block;
+    font-size: 15px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password']{
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 35px;
+    font-size: 16px;
+    width: 80%;
+}
+
+
+input[type='submit']{
+    height: 40px;
+    border: none;
+    background-color: rgb(122, 7, 7);
+    padding: 0 15px;
+    margin: 0 auto;
+    color: white;
+    border-radius:5px;
+    margin-top: 15px;
+    font-size: 18px;
+    width: 80%;
+    cursor: pointer;
+}
+
+input[type='submit']:hover{
+    color: rgb(122, 7, 7);
+    background-color: white;
+    border: 1px solid rgb(122, 7, 7);
+    transition: all 0.2s ease;
+}
+
+.link-to-login{
+    margin-top: 30px;
+}
+
+.link-to-login > a{
+    color: rgb(122, 7, 7);
+    font-size: 14px;
+}
 .error,.invalid-email{
     display: none;
 }
-a:link {
-    color: white;
-    text-decoration: none;
-    background-color: rgb(122, 7, 7);
-    padding: 10px;
-    border-radius: 25px;
-}
-
-a:visited {
-    color: #f3efec;
-}
-a:hover {
-    color: rgb(122, 7, 7);
-    text-decoration: underline;
-    background-color: silver;
-}
-
-#h1_register {
-    color: black;
-    text-align: center;
-    margin-top: 10px;
-}
-
-#submit:hover {
-    background-color: rgb(122, 7, 7);
-    height: 35px;
-}
-
-#id4 {
-    margin-top: 40px;
+.image-container{
     display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    margin-left: 85%;
+    align-items: center;
+}
+.image-container > img{
+    width: 100%;
 }
 
-#id4 > div {
-    margin: 0px 10px;
+form > div{
+    position: relative;
 }
 
-hr {
-    background-color: black;
-    color: black;
+form .fa{
+    position: absolute;
+    top:43%;
+    left:3%;
+    color: rgb(97, 96, 96);
 }
