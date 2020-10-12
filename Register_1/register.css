@@ -65,8 +65,6 @@ header > ul > li > a{
     padding-top: 40px;
     padding-bottom: 30px;
     border-radius: 10px;
-    
-   
 }
 
 .form-container > .form-info > h2{
@@ -128,8 +126,18 @@ input[type='submit']:hover{
     font-size: 14px;
 }
 .error,.invalid-email{
+    color: red;
     display: none;
 }
+.email-container{
+    position: relative;
+}
+
+.invalid-email{
+    position: absolute;
+    bottom: 0;
+}
+
 .image-container{
     display: flex;
     align-items: center;
