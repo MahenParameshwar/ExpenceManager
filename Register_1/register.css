@@ -47,7 +47,7 @@ header > ul > li > a{
 }
 
 .container{
-    max-width: 1000px;
+    max-width: 900px;
     margin: 40px auto;
     height: 600px;
     display: flex;
@@ -59,11 +59,14 @@ header > ul > li > a{
     height: 100%;
 }
 
+/*Contains the form*/
 .container > div:first-child {
     padding-left: 60px;
     padding-top: 40px;
     padding-bottom: 30px;
     border-radius: 10px;
+    
+   
 }
 
 .form-container > .form-info > h2{
@@ -130,6 +133,7 @@ input[type='submit']:hover{
 .image-container{
     display: flex;
     align-items: center;
+    margin-left: 50px;
 }
 .image-container > img{
     width: 100%;
@@ -141,7 +145,7 @@ form > div{
 
 form .fa{
     position: absolute;
-    top:43%;
+    top:44%;
     left:3%;
     color: rgb(97, 96, 96);
 }
