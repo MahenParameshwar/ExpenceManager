@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+    crossorigin="anonymous"/>
+    <script type="text/javascript" src="../user.js"></script>
+</head>
+<body>
+    <header class="header">
+        <ul>
+            <li>
+                <a href="http://www.masaischool.com">Login</a>
+            </li>
+            <li>
+                <a href="http://www.masaischool.com">Dashboard</a>
+            </li>
+        </ul>
+    </header>
+    <div  class ="container">
+        <div class="form-container">
+            <div class="form-info">
+                <h2>
+                    Sign up now
+                </h2>
+                <span class='form-fill'>Fill in the form to keep track of your budget</span>
+            </div>
+            <form>
+                <div>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <label >Name</label>
+                    <input type="text" name="Username" id="Username" placeholder="Username" required minlength="4">
+                </div>
+                <div class="email-container">
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <label >Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <span class="invalid-email">Invalid email</span>
+                </div>
+                <div>
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <label >Password</label>
+                    <input type="password" name="password" placeholder="Password" id="password" required minlength="6">
+                </div>
+                <input type="submit" value="Register" id = "submit">
+                <span class="error">User already exists</span>
+            </form>
+            <div class = 'link-to-login'>
+                <a href="">Click Here to log in</a>
+            </div>
+        </div>
+        <div class="image-container">
+            <img src="https://good-travel.co.uk/wp-content/uploads/2019/06/Expense-Management-Services.svg" alt="">
+        </div>
+    </div>
+    
+    
+    <script type="text/javascript" src="register.js"></script>
+</body>
+</html>
