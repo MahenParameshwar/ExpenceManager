@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color:rgb(218, 240, 234);
@@ -15,15 +19,10 @@ body {
     border-radius: 3px;
 }
 
-form > div {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-}
 
 input {
     width: 250px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
     font-size: 15px;
@@ -36,20 +35,16 @@ input {
 #submit {
     color: rgb(5, 5, 5);
     font-weight: normal;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 272px;
     padding: 10px;
     text-align: center;
     border: .5px solid grey;
-    margin-left: 15px;
+    margin-left: 0px;
     background-color: rgb(207, 230, 222);
 }
 
-#id3 {
-    width: 20%;
-    background-color: white;
-    height: 100%;
-}
+
 
 #id2 {
     font-size: 15px;
@@ -57,9 +52,6 @@ input {
     text-align: center;
 }
 
-.error,.invalid-email{
-    display: none;
-}
 a:link {
     color: white;
     text-decoration: none;
@@ -68,36 +60,24 @@ a:link {
     border-radius: 5px;
 }
 
-a:visited {
-    color: #f3efec;
-}
+
 a:hover {
     color: black;
     text-decoration: underline;
     background-color: rgb(153, 238, 224);
 }
 
-#h1_register {
-    color: black;
-    text-align: center;
-    margin-top: 10px;
-}
 
 #submit:hover {
     background-color: rgb(119, 231, 194)
 }
 
-#id4 {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    margin-left: 85%;
+.invalid-email{
+    position: absolute;
+    bottom: 0;
 }
 
-#id4 > div {
-    margin: 0px 10px;
-}
+
 
 hr {
     background-color: black;
@@ -108,4 +88,8 @@ hr {
     font-size: 30px;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.error {
+    display: none;
 }
