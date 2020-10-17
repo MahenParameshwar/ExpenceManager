@@ -14,7 +14,6 @@ div{
     border: 1px solid grey;
     padding: 50px;
     margin: 100px auto 100px auto;
-    height: 350px;
     background-color: white;
     box-shadow: violet;
     width: 300px;
@@ -44,6 +43,8 @@ input[type='submit']{
 }
 
 .error{
+    padding: 20px;
+    color: red;
     display: none;
 }
 
