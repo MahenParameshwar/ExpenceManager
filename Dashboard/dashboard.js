@@ -14,7 +14,9 @@ let expense = +displayIncome.textContent;
 function createRow(history){
     transactionHistory.innerHTML = "";
     
-    for(let i = history.length-1; i >= 0; i--){
+    for(let i = history.length-1; i >=  history.length-1-4; i--){
+        if(i<0)
+        break;
         let row = document.createElement('tr');
         
         row.append(history[i][0]);
@@ -37,7 +39,6 @@ function createRow(history){
 
 
 window.onload = function(){
-    console.log('yes')
     if(!localStorage.getItem('CurrentUser')){
         location.assign('/Register/register.html')
         return;
@@ -49,9 +50,8 @@ window.onload = function(){
 }
 
 function handleLogout(event){
-    console.log('logout')
     localStorage.removeItem('CurrentUser');
-    location.assign('/Login_1/login.html')
+    location.assign('/Login/login.html')
 }
 
 //when page loads displays users data
@@ -89,7 +89,7 @@ function renderChart(user){
             }
         
         // Add and configure Series
-        var pieSeries = chart.series.push(new am4charts.PieSeries());
+           var pieSeries = chart.series.push(new am4charts.PieSeries());
         var colorSet = new am4core.ColorSet();
         colorSet.list = ["hotpink", "blueviolet", "deepmagenta", "darkturquoise", "green"].map(function(color) {
         return new am4core.color(color);
@@ -125,10 +125,6 @@ function handleTransaction(event){
     var transactionObject = new TransactionObject(formData.get('title'),
                                                     formData.get('amount'),
                                                     formData.get('transaction-type'))
-    if(transactionObject.amount < 0){
-        alert('Enter a positive amount')
-        return;
-    }
     event.target.reset()
     if(transactionObject.type === 'debit'){
         if(transactionObject.amount > balance){
