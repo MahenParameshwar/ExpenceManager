@@ -126,6 +126,9 @@ function handleTransaction(event){
                                                     formData.get('amount'),
                                                     formData.get('transaction-type'))
     event.target.reset()
+    if(transactionObject.amount <= 0){
+        alert('Enter Amount greater than zero')
+    }
     if(transactionObject.type === 'debit'){
         if(transactionObject.amount > balance){
             alert('Insufficient Balance');
