@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 100vw;
+    height: 90vh;
+    letter-spacing: 0.05rem;
+    /* background-color: gray;
+    color: silver */
+    
+}
+
+.chart-container{
+    text-align: center;
+    padding-top: 10px;
+}
+
+#chart_div {
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+i {
+    color: rgb(119, 231, 194);
+}
+
+.th {
+    margin: 10px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 400;
+    border: .5px solid rgb(119, 231, 194);
+}
+
+h3 {
+    font-weight: 500;
+    padding: 10px 0px;
+    color: rgb(0, 0, 0);
+}
+
+tr {
+    margin: 10px;
+}
+.container{
+    display: flex;
+    border: 100px solid rgb(119, 231, 194);
+}
+
+main{
+    width: 100%;
+    padding-left: 100px;
+}
+
+section{
+    margin-top: 40px;
+}
+
+header{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.dashboard > h2{
+    margin-bottom: 30px;
+}
+
+.header-links{
+    display: flex;
+    list-style: none;
+    width: 200px;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 20px;
+    height: 60%;
+}
+
+.profile > li,.header-links > li{
+    height: 100%;
+    cursor: pointer;
+}
+
+img[alt='profile']{
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+img[alt='profile'] + div{
+    margin-left: 10px;
+}
+.upper-section{
+    display: grid;
+    height: 500px;
+    
+    grid-template-areas: "balance-info chart-container"
+                        "form-container chart-container";
+    grid-template-rows: 0.5fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.box {
+    background-color: rgb(119, 231, 194);
+}
+
+.chart-container{
+    grid-area: chart-container;
+}
+
+.form-container{
+    grid-area: form-container;   
+}
+
+.balance-info{
+    display: grid;
+    grid-area: balance-info;
+    grid-template-areas: "box box box";
+                        
+    gap: 10px;
+}
+
+.box{
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.heading{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.heading + div{
+    margin-top: 40px;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+label:not(.transaction-name){
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 20px;
+}
+
+input[type='text'],input[type='number']{
+    height: 40px;
+    width: 80%;
+    border-radius: 5px;
+    border: .5px solid rgb(119, 231, 194);
+    padding-left: 1rem;
+    color: rgb(31, 28, 28)
+}
+
+.bottom-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.bottom-section > div:first-child{
+    flex: 1;
+}
+
+.view-options > button {
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: 15px;
+    font-weight: 300;
+    border-radius: 3px;
+    color: rgb(32, 30, 30);
+    background-color: white;
+    border: 0.5px solid rgb(119, 231, 194);
+}
+
+.view-options > button:hover {
+    background-color: rgb(119, 231, 194)
+}
+
+.transaction-history{
+    padding:20px 40px 40px 0px;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.transaction-history > h3{
+    font-size: 19px;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid grey;
+}
+
+table{
+    width: 100%;
+    text-align: left;
+}
+
+table,td,tr,th{
+    border-collapse: collapse;
+}
+
+.amount-type{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.amount{
+    flex: 2;
+}
+
+.type-of-transction{
+    flex: 1;
+}
+
+.type-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.add-btn{
+    margin-top: 40px;
+    height: 40px;
+    padding: 0 30px;
+    border-radius: 5px;
+    border: .5px solid rgb(119, 231, 194);
+    background-color: white;
+    outline: none;
+}
+
+.add-btn:hover {
+    background-color: rgb(119, 231, 194);
+}
+
+th,td{
+    height:50px;
+    border-bottom: 1px solid grey;
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color: green;
+}
+
+.fa{
+    pointer-events: none;
+}

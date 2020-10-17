@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+    crossorigin="anonymous"/>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Resources -->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+<script>
+
+</script>
+</head>
+<body>
+    
+    <div class="container">
+        <main class="main">
+            <header>
+                <ul class="header-links">
+                    <li>
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </li>
+                    <li class='logout'>
+                        <i class="fa fa-power-off" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </li>
+                </ul>
+                <ul class="profile">
+                    <li style="display: flex;justify-content: center;align-items: center;">
+                        <img src="https://www.biography.com/.image/t_share/MTIwNjA4NjMzNzAzNzI4NjUy/john-cena-562300-1-402.jpg" alt="profile"></img>
+                        <div class="userName">
+                            
+                        </div>
+                    </li>
+                </ul>
+            </header>
+            <section class="section">
+                <div class='dashboard'>
+                    <h2>Dashboard</h2>
+                </div>
+                <div class="upper-section">
+                    <div class="balance-info">
+                        <div class='box'>
+                            <div class='heading'>Total Balance</div>
+                            <div>&#8377;<span class="balance">0</span></div>
+                        </div>
+                        <div class='box'>
+                            <div class='heading'>Total Expenses</div>
+                            <div>&#8377;<span class="expense">0</span></div>
+                        </div>
+                        <div class="box">
+                            <div class='heading'>Total Income</div>
+                            <div>&#8377;<span class="income">0</span></div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="form-container">
+                        <h3>Add Transaction</h3>
+                        <form>
+                            <div>
+                                <label >Description</label>
+                                <input type="text"name='title' placeholder="Enter decription" required minlength="3">
+                            </div>
+                            <div class="amount-type">
+                                <div class="amount">
+                                    <label >Amount</label>
+                                    <input type="number" name='amount' placeholder="Enter Amount" required>
+                                </div>
+                                <div class="type-of-transction">
+                                    <label>Type<label>
+                                    <div class="type-container">
+                                        <div class="type">
+                                            <input type="radio" name="transaction-type"  value="credit"  checked="checked" required>
+                                            <label class="transaction-name">Credit</label>
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="transaction-type"  value="debit">
+                                            <label class="transaction-name">Debit</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <input type="submit" value="Add Transaction" class='add-btn'>
+                        </form>
+                    </div>
+                    <div class="chart-container" id="chart_wrap">
+                        <h3>Your spendings</h3>
+                        <div class="" id="chart_div"></div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <div class="transaction-history">
+                        <div style="display: flex;justify-content: space-between;">
+                            <h3>Transaction History</h3>
+                            <div class="view-options">
+                                <button>All</button>
+                                <button>Debit</button>
+                                <button>Credit</button>
+                            </div>
+                        </div>
+                        <br>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class ="th">Description</th>
+                                    <th class = "th">Type</th>
+                                    <th class = "th">Amount</th>
+                                    <th class = "th">Time Stamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script type="text/javacript" src="dashboard.js"></script>
+</body>
+</html>
