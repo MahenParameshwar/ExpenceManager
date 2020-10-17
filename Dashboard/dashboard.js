@@ -14,7 +14,9 @@ let expense = +displayIncome.textContent;
 function createRow(history){
     transactionHistory.innerHTML = "";
     
-    for(let i = history.length-1; i >= 0; i--){
+    for(let i = history.length-1; i >=  history.length-1-4; i--){
+        if(i<0)
+        break;
         let row = document.createElement('tr');
         
         row.append(history[i][0]);
@@ -87,7 +89,7 @@ function renderChart(user){
             }
         
         // Add and configure Series
-        var pieSeries = chart.series.push(new am4charts.PieSeries());
+           var pieSeries = chart.series.push(new am4charts.PieSeries());
         var colorSet = new am4core.ColorSet();
         colorSet.list = ["hotpink", "blueviolet", "deepmagenta", "darkturquoise", "green"].map(function(color) {
         return new am4core.color(color);
