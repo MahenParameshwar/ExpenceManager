@@ -1,6 +1,10 @@
+import users from '../userdata/user.js'
 let usersData = null;
 
 window.onload = function(){
+    if (!localStorage.getItem('users')){
+        localStorage.setItem('users',JSON.stringify(users));
+    }
     usersData = JSON.parse(localStorage.getItem('users'));
     document.querySelector('form').addEventListener('submit',handleLogin)
 }
@@ -14,7 +18,7 @@ function handleLogin(event){
         return;
     }
 
-    location.assign('http://127.0.0.1:5500/Dashboard/dashboard.html')
+    location.assign('/Dashboard/dashboard.html')
 }
 
 function checkUserExists(email,password){
