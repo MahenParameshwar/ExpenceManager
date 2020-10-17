@@ -168,9 +168,10 @@ input[type='text'],input[type='number']{
     height: 40px;
     width: 60px;
     border: 1px solid rgb(119,231,194);
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     cursor: pointer;
+    background-color: white;
 }
 
 .view-options > button:hover,.add-btn:hover{
@@ -224,10 +225,11 @@ table,td,tr,th{
     margin-top: 40px;
     height: 40px;
     padding: 0 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 1px solid rgb(119,231,194);
     outline: none;
     cursor: pointer;
+    background-color: white;
 }
 
 th,td{

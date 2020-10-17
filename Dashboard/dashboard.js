@@ -91,7 +91,7 @@ function renderChart(user){
         // Add and configure Series
            var pieSeries = chart.series.push(new am4charts.PieSeries());
         var colorSet = new am4core.ColorSet();
-        colorSet.list = ["hotpink", "blueviolet", "deepmagenta", "darkturquoise", "green"].map(function(color) {
+        colorSet.list = ["hotpink", "red" , "cyan", "yellow", "purple", "blueviolet", "deepmagenta", "darkturquoise", "green"].map(function(color) {
         return new am4core.color(color);
         });
         pieSeries.colors = colorSet;
