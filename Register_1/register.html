@@ -13,53 +13,39 @@
     <script type="text/javascript" src="../user.js"></script>
 </head>
 <body>
-    <header class="header">
-        <ul>
-            <li>
-                <a href="http://www.masaischool.com">Login</a>
-            </li>
-            <li>
-                <a href="http://www.masaischool.com">Dashboard</a>
-            </li>
-        </ul>
-    </header>
-    <div  class ="container">
-        <div class="form-container">
-            <div class="form-info">
-                <h2>
-                    Sign up now
-                </h2>
-                <span class='form-fill'>Fill in the form to keep track of your budget</span>
-            </div>
-            <form>
-                <div>
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                    <label >Name</label>
-                    <input type="text" name="Username" id="Username" placeholder="Username" required minlength="4">
-                </div>
-                <div class="email-container">
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <label >Email</label>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                    <span class="invalid-email">Invalid email</span>
-                </div>
-                <div>
-                    <i class="fa fa-key" aria-hidden="true"></i>
-                    <label >Password</label>
-                    <input type="password" name="password" placeholder="Password" id="password" required minlength="6">
-                </div>
-                <input type="submit" value="Register" id = "submit">
-                <span class="error">User already exists</span>
-            </form>
-            <div class = 'link-to-login'>
-                <a href="">Click Here to log in</a>
-            </div>
+    <div id = "box1">
+        <div id = "heading">Register</div>
+        <div>
+    <form action="">
+        <div>
+            <input type="text" name="Username" id="Username" required minlength="4"
+            placeholder="Name">
         </div>
-        <div class="image-container">
-            <img src="https://good-travel.co.uk/wp-content/uploads/2019/06/Expense-Management-Services.svg" alt="">
+        <div>
+            <input type="email" name="email" placeholder = "Email" id="email" required>
+            <span class="invalid-email">Invalid email</span>
+        </div>
+        <div>
+            <input type="password" name="password" id="password" required minlength="6"
+            placeholder="Password">
+        </div>
+        <input type="submit" value="Sign up" id = "submit">
+        <span class="error">User already exists</span>
+    </form>
+    </div>
+    <div>
+        <div id = "id3"></div>
+    </div>
+    <div>
+        <div id = id2>
+            Already a user? 
+            <br/>
+            <br/>
+            <br/>
+            <a href="http://www.google.com">Login here.</a>
         </div>
     </div>
-    
+    </div>
     
     <script type="text/javascript" src="register.js"></script>
 </body>

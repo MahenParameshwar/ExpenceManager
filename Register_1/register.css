@@ -1,136 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*,*::before,*::after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
-    font-family: 'Lato','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /* background-color: gray;
-    color: silver */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color:rgb(218, 240, 234);
+    color: rgb(32, 30, 30)
 }
 
-a{
-    text-decoration: none;
-}
-
-header{
-    height: 60px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-bottom:1px solid grey ;
-}
-
-header > ul{
-    display: flex;
-    width: 240px;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 30px;
-    list-style: none;
-}
-
-header > ul > li{
-    background-color: rgb(122, 7, 7);
-    padding: 0 15px;
-    height: 40px;
-    border-radius:20px ;
-    display: flex;
-    align-items: center;
-}
-
-header > ul > li > a{
-    color: white;
-}
-
-.container{
-    max-width: 900px;
-    margin: 40px auto;
-    height: 600px;
-    display: flex;
-    align-items: center;
-}
-
-.container > div{
-    flex: 1;
-    height: 100%;
-}
-
-/*Contains the form*/
-.container > div:first-child {
-    padding-left: 60px;
-    padding-top: 40px;
-    padding-bottom: 30px;
-    border-radius: 10px;
-}
-
-.form-container > .form-info > h2{
-    margin-bottom: 10px;
-}
-
-.form-container > .form-info{
-    margin-bottom: 20px;
-}
-
-label{
-    margin-bottom: 12px;
-    display: block;
-    font-size: 15px;
-}
-
-input[type='text'],
-input[type='email'],
-input[type='password']{
-    height: 40px;
-    margin-right: 20px;
-    margin-bottom: 25px;
-    border: 1px solid black;
-    border-radius: 5px;
-    outline: none;
-    padding-left: 35px;
-    font-size: 16px;
-    width: 80%;
-}
-
-
-input[type='submit']{
-    height: 40px;
-    border: none;
-    background-color: rgb(122, 7, 7);
-    padding: 0 15px;
-    margin: 0 auto;
-    color: white;
-    border-radius:5px;
-    margin-top: 15px;
-    font-size: 18px;
-    width: 80%;
-    cursor: pointer;
-}
-
-input[type='submit']:hover{
-    color: rgb(122, 7, 7);
+#box1 {
+    border: 1px solid grey;
+    padding: 50px;
+    margin: 100px auto 100px auto;
+    height: 400px;
     background-color: white;
-    border: 1px solid rgb(122, 7, 7);
-    transition: all 0.2s ease;
+    box-shadow: violet;
+    width: 300px;
+    border-radius: 3px;
 }
 
-.link-to-login{
-    margin-top: 30px;
+
+input {
+    width: 250px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    border-radius: 5px;
+    color: rgb(119, 231, 194);
+    padding: 10px;
+    border: .5px solid grey;
 }
 
-.link-to-login > a{
-    color: rgb(122, 7, 7);
-    font-size: 14px;
+#submit {
+    color: rgb(5, 5, 5);
+    font-weight: normal;
+    margin-top: 20px;
+    width: 272px;
+    padding: 10px;
+    text-align: center;
+    border: .5px solid grey;
+    margin-left: 0px;
+    background-color: rgb(207, 230, 222);
 }
-.error,.invalid-email{
-    color: red;
-    display: none;
+
+
+
+#id2 {
+    font-size: 15px;
+    margin-top: 40px;
+    text-align: center;
 }
-.email-container{
-    position: relative;
+
+a:link {
+    color: white;
+    text-decoration: none;
+    background-color: rgb(119, 231, 194);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+    background-color: rgb(153, 238, 224);
+}
+
+
+#submit:hover {
+    background-color: rgb(119, 231, 194)
 }
 
 .invalid-email{
@@ -138,22 +77,19 @@ input[type='submit']:hover{
     bottom: 0;
 }
 
-.image-container{
-    display: flex;
-    align-items: center;
-    margin-left: 50px;
-}
-.image-container > img{
-    width: 100%;
+
+
+hr {
+    background-color: black;
+    color: black;
 }
 
-form > div{
-    position: relative;
+#heading {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-form .fa{
-    position: absolute;
-    top:44%;
-    left:3%;
-    color: rgb(97, 96, 96);
+.error {
+    display: none;
 }
