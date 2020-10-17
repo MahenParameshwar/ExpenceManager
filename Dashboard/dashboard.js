@@ -37,6 +37,7 @@ function createRow(history){
 
 
 window.onload = function(){
+    console.log('yes')
     if(!localStorage.getItem('CurrentUser')){
         location.assign('/Register/register.html')
         return;
@@ -48,8 +49,9 @@ window.onload = function(){
 }
 
 function handleLogout(event){
+    console.log('logout')
     localStorage.removeItem('CurrentUser');
-    location.assign('/Login/login.html')
+    location.assign('/Login_1/login.html')
 }
 
 //when page loads displays users data
@@ -123,6 +125,10 @@ function handleTransaction(event){
     var transactionObject = new TransactionObject(formData.get('title'),
                                                     formData.get('amount'),
                                                     formData.get('transaction-type'))
+    if(transactionObject.amount < 0){
+        alert('Enter a positive amount')
+        return;
+    }
     event.target.reset()
     if(transactionObject.type === 'debit'){
         if(transactionObject.amount > balance){
