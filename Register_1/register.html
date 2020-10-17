@@ -9,33 +9,23 @@
     <script type="text/javascript" src="../user.js"></script>
 </head>
 <body>
-    <div id = "id4">
-        <div> 
-            <a href="http://www.masaischool.com">Login</a>
-        </div>
-        <div>
-            <a href="http://www.masaischool.com">Dashboard</a>
-        </div>
-    </div>
-<hr/>
-    <h1 id = "h1_register">Register</h1>
     <div id = "box1">
+        <div id = "heading">Register</div>
         <div>
     <form action="">
         <div>
-            <label >Name</label>
-            <input type="text" name="Username" id="Username" required minlength="4">
+            <input type="text" name="Username" id="Username" required minlength="4"
+            placeholder="Name">
         </div>
         <div>
-            <label >Email</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" placeholder = "Email" id="email" required>
             <span class="invalid-email">Invalid email</span>
         </div>
         <div>
-            <label >Password</label>
-            <input type="password" name="password" id="password" required minlength="6">
+            <input type="password" name="password" id="password" required minlength="6"
+            placeholder="Password">
         </div>
-        <input type="submit" value="Click to register!" id = "submit">
+        <input type="submit" value="Sign up" id = "submit">
         <span class="error">User already exists</span>
     </form>
     </div>
