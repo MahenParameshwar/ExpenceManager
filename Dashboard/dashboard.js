@@ -13,10 +13,9 @@ let expense = +displayIncome.textContent;
 //creates rows in the table populating it with transcation records stores in the history 
 function createRow(history){
     transactionHistory.innerHTML = "";
-    
-    for(let i = history.length-1; i >=  history.length-1-4; i--){
-        if(i<0)
-        break;
+    console.log(history)
+    for(let i = history.length-1; i >= 0; i--){
+        
         let row = document.createElement('tr');
         
         row.append(history[i][0]);
@@ -31,8 +30,11 @@ function createRow(history){
         else{
         row.classList.add('credit')
         }
-
+        if(i< history.length-1-4){
+            row.style.display = "none";
+        }
         transactionHistory.append(row);
+        
     }
 
 }
@@ -215,12 +217,17 @@ function updateTransaction({title,amount,type,timestamp}){
 //filter transaction type based on user choice b/w all debit and credit
 function showTransactionRecords(){
     let records = transactionHistory.querySelectorAll('tr')
-    console.log(records)
-    
+    if(event.target.textContent === 'All'){
+        let array = []
+        for(let i = 0; i < records.length;i++){
+           array.push(Array.from(records[i].querySelectorAll('td'))); 
+            
+        }
+        createRow(array.reverse())
+    }
+    else
     records.forEach(function(record){
         switch(event.target.textContent){
-            case 'All': record.style.display = "";
-            break;
             case 'Debit':if(!record.classList.contains('debit')){
                                 record.style.display = "none";
                             }
