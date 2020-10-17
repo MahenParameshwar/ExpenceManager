@@ -51,7 +51,7 @@ window.onload = function(){
 
 function handleLogout(event){
     localStorage.removeItem('CurrentUser');
-    location.assign('/Login/login.html')
+    location.assign('/Login_1/login.html')
 }
 
 //when page loads displays users data
